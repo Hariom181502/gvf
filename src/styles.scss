@@ -1,0 +1,127 @@
+//-----------------------
+//---------HTMl Root-----
+//-----------------------
+html{
+    font-size: 62.5%;  // 62.5% of 16px = 10px 
+    scroll-behavior: smooth;
+  }
+  @media screen and (min-width: 1921px){
+    html{
+      font-size: 300%; // 58% of 16px = 48px
+    }
+  }
+  @media screen and (max-width: 1399px){
+    html{
+      font-size: 58%; // 58% of 16px = 9.28px
+    }
+  }
+  @media screen and (max-width: 991px){
+    html{
+      font-size: 56%; // 56% of 16px = 8.96px 
+    }
+  }
+  
+  
+  //-----------------------
+  //---------Body---------
+  //-----------------------
+  body {
+    margin: 0;
+    font-family: 'Inter-r';
+    font-size: 1.6rem;
+  }
+  
+  //-----------------------
+  //---------Inter font----
+  //-----------------------
+  @font-face {
+    font-family: 'Inter-r';
+    src: url(../src/assets/Fonts/Inter-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Inter-m';
+    src: url(../src/assets/Fonts/Inter-Medium.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Inter-sb';
+    src: url(../src/assets/Fonts/Inter-SemiBold.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Inter-b';
+    src: url(../src/assets/Fonts/Inter-Bold.ttf);
+  }
+  
+  // ----------------------------------
+  // -----------Fonts Styling---------
+  // ----------------------------------
+  .f-10 {
+    font-size: 1rem;
+  }
+  .f-11 {
+    font-size: 1.1rem;
+  }
+  
+  .f-12 {
+    font-size: 1.2rem;
+  }
+  
+  .f-14 {
+    font-size: 1.4rem;
+  }
+  
+  .f-16 {
+    font-size: 1.6rem;
+  }
+  
+  .f-18 {
+    font-size: 1.8rem;
+  }
+  
+  .f-20 {
+    font-size: 2.0rem;
+  }
+  
+  .f-22{
+    font-size: 2.2rem;
+  }
+  
+  .f-24{
+    font-size: 2.4rem;
+  }
+  
+  .f-28{
+    font-size: 2.8rem;
+  }
+  
+  .f-30{
+    font-size: 3rem;
+  }
+  
+  
+  .regular-font {
+    font-family: 'Inter-r' !important;
+  }
+  .medium-font {
+    font-family: 'Inter-m' !important;
+  }
+  .semibold-font {
+    font-family: 'Inter-sb' !important;
+  }
+  .bold-font {
+    font-family: 'Inter-b' !important;
+  }
+
+  // ----------------------------------
+  // -----------Additional Styling-----------
+  // ----------------------------------
+  .cursor-pointer{
+    cursor: pointer;
+  }
+  .inner-scroll{
+    max-height: 70vh;
+    overflow: auto;
+  }
+ 
