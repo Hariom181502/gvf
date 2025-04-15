@@ -90,4 +90,24 @@
   .generator-text-style{
     color: #646464;
   }
+  .energy-container {
+    position: relative;
+    background: linear-gradient(to right, #92D797 0%, #047243 100%);
+    max-width: 150px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+      background-image: url(/images/dashboard/energy.svg);
+      background-repeat: no-repeat;
+      background-position: top left;
+      z-index: 1;
+    }
+  }
+  
+  
+  
 }
