@@ -13,6 +13,7 @@ import { alertsDtl, generatorDtl } from './jsonData';
 export class DashboardComponent implements OnInit{
   
   checksLogsDoughnutChartData:any;
+  energyUtilityBarChartData:any;
   generatorDtl:any;
   alertsDtl:any;
 
@@ -25,6 +26,7 @@ export class DashboardComponent implements OnInit{
   setValues(){
     this.chartService.getChartsData().subscribe((res:any) => {
       this.checksLogsDoughnutChartData = res?.checksLogsDoughnutChartData;
+      this.energyUtilityBarChartData = res?.energyUtilityBarChartData;
     });
 
     this.alertsDtl = alertsDtl;

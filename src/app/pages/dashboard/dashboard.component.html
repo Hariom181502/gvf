@@ -1,4 +1,4 @@
-<div class="dashboard-body-container">
+<div class="dashboard-body-container pb-4">
 
     <div class="dashboard-header-container bg-white p-4">
         <div class="content-container d-flex justify-content-between align-items-center">
@@ -30,7 +30,7 @@
                         <p class="semibold-font common-text-color f-20 m-0">Checks & logs</p>
                         <div class="chart-container row gx-4 gx-xxl-5 gy-4 align-items-center my-3">
                             <div class="col-xxl-7">
-                                <app-chart [chartid]="'revenueExpenditureDoughnutChart'"
+                                <app-chart [chartid]="'checksLogsDoughnutChart'"
                                     [configChart]="checksLogsDoughnutChartData"></app-chart>
                             </div>
                             <div class="col-xxl-5">
@@ -212,12 +212,31 @@
                         </div>
 
                     <div class="chart-container mt-5">
-                        <div class="row">
+                        <div class="row h-100">
                             <div class="col-lg-3">
-                                <div class="energy-container p-3 rounded-3 h-100">
+                                <div class="energy-water-card-container energy-container d-flex flex-column justify-content-between ps-4 pt-4 p-3 rounded-3">
+                                    <img src="/images/dashboard/bolt.svg" alt="bolt" width="24px">
                                        <div class="content-container text-white mt-5 pt-5">
                                           <p class="f-16 semibold-font m-0">ENERGY</p>
                                           <p class="f-20 semibold-font m-0">15480 <span class="f-14">kWh</span></p>
+                                          <p class="f-14 m-0"><i>Yesterday</i></p>
+                                       </div> 
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="chart-data-container">
+                                    <app-chart [chartid]="'energyUtilityBarChart'"
+                                    [configChart]="energyUtilityBarChartData"></app-chart>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-3">
+                                <div class="energy-water-card-container water-container d-flex flex-column justify-content-between ps-4 pt-4 p-3 rounded-3">
+                                    <img src="/images/dashboard/raindrop.svg" alt="raindrop" width="24px">
+                                       <div class="content-container text-white mt-5 pt-5">
+                                          <p class="f-16 semibold-font m-0">WATER</p>
+                                          <p class="f-20 semibold-font m-0">218.2 <span class="f-14">KL</span></p>
                                           <p class="f-14 m-0"><i>Yesterday</i></p>
                                        </div> 
                                 </div>
@@ -228,9 +247,9 @@
 
                 </div>
                 <div class="col-lg-7">
-                    <div class="row">
+                    <div class="row h-100">
                         <div class="col-lg-6">
-                            <div class="alerts-container bg-white rounded-4 p-4">
+                            <div class="alerts-container bg-white rounded-4 p-4 h-100">
                                 <div class="header-details d-flex justify-content-between align-items-center flex-wrap gap-3">
                                             <p class="semibold-font common-text-color f-20 m-0">Alerts</p>
                                         <div class="d-flex align-items-center gap-3">
@@ -261,7 +280,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="alerts-container bg-white rounded-4 p-4">
+                            <div class="alerts-container bg-white rounded-4 p-4 h-100">
                                 <div class="header-details d-flex justify-content-between align-items-center flex-wrap gap-3">
                                             <p class="semibold-font common-text-color f-20 m-0">AMC</p>
                                         <div class="d-flex align-items-center gap-3">

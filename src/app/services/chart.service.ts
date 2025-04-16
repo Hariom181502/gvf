@@ -79,9 +79,72 @@ export class ChartService {
       ]
     };
     
+    const energyUtilityBarChartData = {
+      type: 'bar',
+      responsive: true,
+
+      data: {
+        labels: ['DR Arrear', 'CA', 'LTA Arrear', '-'],
+        datasets: [
+          {
+            label: " ",
+            data: [62, 84, 58, 82],
+            backgroundColor: ['#9FD9BD', '#9FD9BD', '#9FD9BD', '#9FD9BD'],
+            barThickness: 20,
+            borderRadius: 5,
+          }
+        ]
+      },
+      options: {
+        aspectRatio: 2.8,
+        layout: {
+          padding: {
+            top: 20,
+            bottom: 20
+          },
+        },
+        plugins: {
+          legend: false,
+        },
+        scales: {
+          y: {
+            // type: 'category',
+            min: 20,
+            max: 100,
+            ticks: {
+              stepSize: 20,
+              callback: function (value: any) {
+                return value + 'k';
+              }
+            },
+            border: {
+              display: false,
+            },
+            grid: {
+              color: '#EDEDED6A'
+            },
+          },
+          x: {
+            // type: 'category',
+            grid: {
+              drawOnChartArea: false,
+            },
+            ticks: {
+              font: {
+                size: 7
+              },
+            }
+          },
+
+        },
+      }
+    }
+   
+
     
     const responseData = {
       checksLogsDoughnutChartData: checksLogsDoughnutChartData,
+      energyUtilityBarChartData: energyUtilityBarChartData,
     }
     return of(responseData)
   }

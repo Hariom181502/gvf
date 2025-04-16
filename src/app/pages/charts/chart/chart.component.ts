@@ -1,5 +1,17 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
-import { ArcElement, Chart, DoughnutController, Legend, Tooltip } from 'chart.js';
+import {
+  ArcElement,
+  BarController,
+  BarElement,
+  CategoryScale,
+  Chart,
+  DoughnutController,
+  Legend,
+  LinearScale,
+  LineController,
+  Tooltip
+} from 'chart.js';
+
 
 @Component({
   selector: 'app-chart',
@@ -15,8 +27,17 @@ export class ChartComponent implements OnInit, AfterViewInit{
   @Input() chartid: any;
   @Input() chartClass: any;
   
-  constructor() { 
-    Chart.register(ArcElement, Tooltip, Legend, DoughnutController);
+  constructor() {
+    Chart.register(
+      ArcElement,
+      Tooltip,
+      Legend,
+      DoughnutController,
+      LinearScale,
+      CategoryScale,
+      BarController,    // <-- Add this
+      BarElement        // <-- And this
+    );
   }
 
   ngOnInit(): void {
