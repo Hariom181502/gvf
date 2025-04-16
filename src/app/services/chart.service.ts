@@ -35,7 +35,7 @@ export class ChartService {
       },
       options: {
         cutout: '60%',
-        aspectRatio: 1,
+        aspectRatio: 2.3,
         plugins: {
           legend: {
             position: 'start',
@@ -96,7 +96,7 @@ export class ChartService {
         ]
       },
       options: {
-        aspectRatio: 2.4,
+        aspectRatio: 2.6,
         layout: {
           padding: {
             top: 35,
@@ -157,7 +157,7 @@ export class ChartService {
         ]
       },
       options: {
-        aspectRatio: 2.4,
+        aspectRatio: 2.6,
         layout: {
           padding: {
             top: 35,

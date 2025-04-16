@@ -30,13 +30,13 @@
                         <div class="col-sm-6">
                             <div class="checks-logs-container bg-white rounded-4 p-4 h-100">
                                 <p class="semibold-font common-text-color f-20 m-0">Checks & logs</p>
-                                <div class="chart-container row gx-4 gx-xxl-5 gy-4 align-items-center my-3">
-                                    <div class="col-xxl-6">
+                                <div class="chart-container row gx-4 gx-xxl-5 gy-4 align-items-center my-2">
+                                    <div class="col-12">
                                         <app-chart [chartid]="'checksLogsDoughnutChart'"
                                             [configChart]="checksLogsDoughnutChartData"></app-chart>
                                     </div>
-                                    <div class="col-xxl-6">
-                                        <div class="chart-data-container d-flex flex-xxl-column flex-wrap gap-4">
+                                    <div class="col-12">
+                                        <div class="chart-data-container d-flex flex-wrap gap-4">
                                             <div class="d-flex align-items-baseline gap-3">
                                                 <span class="circle-indicator"
                                                     [style.backgroundImage]="'linear-gradient(to right, #68B2FD, #3E6A97)'"></span>
@@ -57,11 +57,11 @@
                         <div class="col-sm-6">
                             <div class="row h-100">
                                 <div class="col-12 ppms-meter-raeding-progress-container">
-                                    <div class="ppms-container bg-white rounded-4 p-4 h-100">
+                                    <div class="ppms-container bg-white rounded-4 p-4 d-flex flex-column justify-content-between h-100">
                                         <p class="semibold-font common-text-color f-20">PPMs</p>
-                                        <div class="inner-content-container mt-5 pt-5">
+                                        <div class="inner-content-container">
                                             <div
-                                                class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
+                                                class="progress-bar-data-container d-flex justify-content-between align-items-center mb-3">
                                                 <p class="common-text-color f-18 m-0">Daily <span
                                                         class="semibold-font">62</span>%</p>
                                                 <p class="common-text-color f-18 m-0">150/280</p>
@@ -74,11 +74,11 @@
                                     </div>
                                 </div>
                                 <div class="col-12 ppms-meter-raeding-progress-container mt-4">
-                                    <div class="meter-readings-container bg-white rounded-4 p-4 h-100">
+                                    <div class="meter-readings-container bg-white rounded-4 p-4 d-flex flex-column justify-content-between h-100">
                                         <p class="semibold-font common-text-color f-20">Meter readings</p>
-                                        <div class="inner-content-container mt-5 pt-5">
+                                        <div class="inner-content-container">
                                             <div
-                                                class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
+                                                class="progress-bar-data-container d-flex justify-content-between align-items-center mb-3">
                                                 <p class="common-text-color f-18 m-0">Daily <span
                                                         class="semibold-font">62</span>%</p>
                                                 <p class="common-text-color f-18 m-0">150/280</p>
@@ -111,7 +111,7 @@
                                         <p class="common-text-color m-0">Received today</p>
                                     </div>
                                 </div>
-                                <div class="inner-content-container pt-5">
+                                <div class="inner-content-container pt-3">
                                     <div class="row g-4 request-type-cards-container">
                                         <div class="col-sm-6 col-md-4">
                                             <div class="new-request-card-style common-text-color rounded-3">
@@ -152,11 +152,11 @@
                         </div>
                         <div class="col-md-6 col-lg-12 ppms-meter-raeding-progress-container mt-4">
                             <div class="meter-readings-container bg-white rounded-4 p-4 h-100">
-                                <p class="semibold-font common-text-color f-20">Rounds</p>
+                                <p class="semibold-font common-text-color f-20 m-0">Rounds</p>
                                 <div class="row g-5">
                                     <div class="col-6">
                                         <div class="inner-content-container custom-border-right pe-5">
-                                            <div class="d-flex align-items-center gap-3 my-4">
+                                            <div class="d-flex align-items-center gap-3 my-2">
                                                 <img src="images/dashboard/user-shield.svg" alt="shield">
                                                 <p class="semibold-font f-20 common-text-color m-0">Security</p>
                                             </div>
@@ -174,7 +174,7 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="inner-content-container">
-                                            <div class="d-flex align-items-center gap-3 my-4">
+                                            <div class="d-flex align-items-center gap-3 my-2">
                                                 <img src="images/dashboard/user-plumber.svg" alt="plumber">
                                                 <p class="semibold-font f-20 common-text-color m-0">MEP</p>
                                             </div>
@@ -204,7 +204,7 @@
                 <div class="col-xxl-5">
                     <div class="utility-consumption-container bg-white rounded-4 p-4 h-100">
                         <p class="semibold-font common-text-color f-20 m-0">Utility consumption</p>
-                        <div class="dropdown-container my-4">
+                        <div class="dropdown-container my-2">
                             <select class="form-select" aria-label="Small select example">
                                 <option selected>This week (7th April - 12th April’ 2025) </option>
                                 <option value="1">One</option>
@@ -213,12 +213,12 @@
                             </select>
                         </div>
 
-                        <div class="chart-container mt-5">
+                        <div class="chart-container mt-4">
                             <div class="row align-items-start">
                                 <div class="col-sm-3">
                                     <div
                                         class="energy-water-card-container energy-container d-flex flex-sm-column align-items-start justify-content-between ps-4 pt-4 p-3 rounded-3">
-                                        <img src="/images/dashboard/bolt.svg" alt="bolt" width="24px">
+                                        <img src="images/dashboard/bolt.svg" alt="bolt" width="24px">
                                         <div class="content-container text-white">
                                             <p class="f-16 semibold-font m-0">ENERGY</p>
                                             <p class="f-20 semibold-font m-0">15480 <span class="f-14">kWh</span></p>
@@ -238,7 +238,7 @@
                                 <div class="col-sm-3">
                                     <div
                                         class="energy-water-card-container water-container d-flex flex-sm-column align-items-start justify-content-between ps-4 pt-4 p-3 rounded-3">
-                                        <img src="/images/dashboard/raindrops.svg" alt="raindrop" width="24px">
+                                        <img src="images/dashboard/raindrops.svg" alt="raindrop" width="24px">
                                         <div class="content-container text-white">
                                             <p class="f-16 semibold-font m-0">WATER</p>
                                             <p class="f-20 semibold-font m-0">218.2 <span class="f-14">KL</span></p>

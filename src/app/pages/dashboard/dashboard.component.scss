@@ -1,13 +1,13 @@
 @mixin req-type-card-style($bgColor){
   background-color: $bgColor;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 @mixin energy-water-card-style($bg-gradient, $bg-image) {
   position: relative;
   background: $bg-gradient;
   max-width: 180px;
-  min-height: 220px;
+  min-height: 180px;
   &::before {
     content: "";
     position: absolute;
@@ -15,7 +15,7 @@
     left: 0;
     width: 150px;
     height: 150px;
-    background-image: url($bg-image);
+    background-image: $bg-image;
     background-repeat: no-repeat;
     background-position: top left;
     z-index: 1;
@@ -80,7 +80,7 @@
   }
   .dropdown-container{
     .form-select{
-      --bs-form-select-bg-img: url("/images/dashboard/down-arrow.svg");
+      --bs-form-select-bg-img: url(/images/dashboard/down-arrow.svg);
       background-position: right 2rem center;
       padding: 1.2rem 1.5rem;
       border-color: #D8D8D8;
@@ -103,7 +103,7 @@
     }
   }
   .fixed-height{
-    max-height: 550px;
+    max-height: 500px;
     overflow: auto;
   }
   .generator-text-style{
@@ -113,15 +113,15 @@
   .energy-container {
     @include energy-water-card-style(
       linear-gradient(to right, #92D797 0%, #047243 100%),
-      "/images/dashboard/energy.svg"
+      url(/images/dashboard/energy.svg)
     );
   }
   
   .water-container {
     @include energy-water-card-style(
       linear-gradient(to right, #90E6F3 0%, #00485C 100%),
-      "/images/dashboard/energy.svg"
-    );
+      url(/images/dashboard/energy.svg)
+  );
   }
   
 }
@@ -129,7 +129,7 @@
 @media screen and (920px <= width <= 1399px) {
   .energy-water-card-container{
     max-width: 220px !important;
-    min-height: 330px !important;
+    min-height: 300px !important;
   }
 }
 
