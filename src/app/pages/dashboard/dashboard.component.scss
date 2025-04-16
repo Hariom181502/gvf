@@ -103,7 +103,7 @@
     }
   }
   .fixed-height{
-    max-height: 480px;
+    max-height: 550px;
     overflow: auto;
   }
   .generator-text-style{
@@ -126,6 +126,12 @@
   
 }
 
+@media screen and (920px <= width <= 1399px) {
+  .energy-water-card-container{
+    max-width: 220px !important;
+    min-height: 330px !important;
+  }
+}
 
 @media screen and (max-width: 575px) {
   .energy-water-card-container{
@@ -133,5 +139,4 @@
     min-height: 100px !important;
     text-align: end;
   }
-  
 }

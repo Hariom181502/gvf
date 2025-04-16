@@ -31,8 +31,8 @@ export class DashboardComponent implements OnInit{
       this.waterUtilityBarChartData = res?.waterUtilityBarChartData;
     });
 
-    this.alertsDtl = alertsDtl;
     this.generatorDtl = generatorDtl;
+    this.alertsDtl = alertsDtl;
   }
 
 }

@@ -23,29 +23,71 @@
     <div class="container-fluid">
 
         <div class="first-row-container mt-4 px-2">
-            <div class="row gy-4 h-100">
+            <div class="row h-100">
 
-                <div class="col-lg-4">
-                    <div class="checks-logs-container bg-white rounded-4 p-4 h-100">
-                        <p class="semibold-font common-text-color f-20 m-0">Checks & logs</p>
-                        <div class="chart-container row gx-4 gx-xxl-5 gy-4 align-items-center my-3">
-                            <div class="col-xxl-7">
-                                <app-chart [chartid]="'checksLogsDoughnutChart'"
-                                    [configChart]="checksLogsDoughnutChartData"></app-chart>
-                            </div>
-                            <div class="col-xxl-5">
-                                <div class="chart-data-container d-flex flex-xxl-column gap-4">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <span class="circle-indicator"
-                                            [style.backgroundImage]="'linear-gradient(to right, #68B2FD, #3E6A97)'"></span>
-                                        <p class="common-text-color m-0 f-18">Daily - <span
-                                                class="f-24 semibold-font">26</span> /30</p>
+                <div class="col-lg-6">
+                    <div class="row h-100">
+                        <div class="col-sm-6">
+                            <div class="checks-logs-container bg-white rounded-4 p-4 h-100">
+                                <p class="semibold-font common-text-color f-20 m-0">Checks & logs</p>
+                                <div class="chart-container row gx-4 gx-xxl-5 gy-4 align-items-center my-3">
+                                    <div class="col-xxl-6">
+                                        <app-chart [chartid]="'checksLogsDoughnutChart'"
+                                            [configChart]="checksLogsDoughnutChartData"></app-chart>
                                     </div>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <span class="circle-indicator"
-                                            [style.backgroundImage]="'linear-gradient(to right, #FEB761, #CD770E)'"></span>
-                                        <p class="common-text-color m-0 f-18">Hourly - <span
-                                                class="f-24 semibold-font">10</span> /22</p>
+                                    <div class="col-xxl-6">
+                                        <div class="chart-data-container d-flex flex-xxl-column flex-wrap gap-4">
+                                            <div class="d-flex align-items-baseline gap-3">
+                                                <span class="circle-indicator"
+                                                    [style.backgroundImage]="'linear-gradient(to right, #68B2FD, #3E6A97)'"></span>
+                                                <p class="common-text-color m-0 f-18">Daily - <span
+                                                        class="f-24 semibold-font">26</span> /30</p>
+                                            </div>
+                                            <div class="d-flex align-items-baseline gap-3">
+                                                <span class="circle-indicator"
+                                                    [style.backgroundImage]="'linear-gradient(to right, #FEB761, #CD770E)'"></span>
+                                                <p class="common-text-color m-0 f-18">Hourly - <span
+                                                        class="f-24 semibold-font">10</span> /22</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row h-100">
+                                <div class="col-12 ppms-meter-raeding-progress-container">
+                                    <div class="ppms-container bg-white rounded-4 p-4 h-100">
+                                        <p class="semibold-font common-text-color f-20">PPMs</p>
+                                        <div class="inner-content-container mt-5 pt-5">
+                                            <div
+                                                class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
+                                                <p class="common-text-color f-18 m-0">Daily <span
+                                                        class="semibold-font">62</span>%</p>
+                                                <p class="common-text-color f-18 m-0">150/280</p>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-valuenow="25"
+                                                aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar" [style.width.%]="62"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 ppms-meter-raeding-progress-container mt-4">
+                                    <div class="meter-readings-container bg-white rounded-4 p-4 h-100">
+                                        <p class="semibold-font common-text-color f-20">Meter readings</p>
+                                        <div class="inner-content-container mt-5 pt-5">
+                                            <div
+                                                class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
+                                                <p class="common-text-color f-18 m-0">Daily <span
+                                                        class="semibold-font">62</span>%</p>
+                                                <p class="common-text-color f-18 m-0">150/280</p>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-valuenow="25"
+                                                aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar" [style.width.%]="62"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -53,74 +95,54 @@
                     </div>
                 </div>
 
-                <div class="col-lg-8">
-                   <div class="row gy-4 h-100">
-                    <div class="col-12">
-                        <div class="row gy-4 h-100">
-                            <div class="col-lg-4 ppms-meter-raeding-progress-container">
-                                <div class="ppms-container bg-white rounded-4 p-4 h-100">
-                                    <p class="semibold-font common-text-color f-20">PPMs</p>
-                                    <div class="inner-content-container mt-5 pt-5">
-                                        <div
-                                            class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
-                                            <p class="common-text-color f-18 m-0">Daily <span
-                                                    class="semibold-font">62</span>%</p>
-                                            <p class="common-text-color f-18 m-0">150/280</p>
-                                        </div>
-                                        <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <div class="progress-bar" [style.width.%]="62"></div>
-                                        </div>
+                <div class="col-lg-6">
+                    <div class="row h-100">
+                        <div class="col-md-6 col-lg-12 mt-4 mt-lg-0">
+                            <div class="service-request-container bg-white rounded-4 p-4 h-100">
+                                <div
+                                    class="header-details d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                    <div class="d-flex align-items-center common-text-color gap-3">
+                                        <p class="semibold-font f-20 m-0">Service request</p>
+                                        <p class="m-0">Last updated : 10:00 AM, 9th April 2025</p>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <p class="common-request-counter semibold-font text-white m-0 text-center">
+                                            04</p>
+                                        <p class="common-text-color m-0">Received today</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="service-request-container bg-white rounded-4 p-4 h-100">
-                                    <div
-                                        class="header-details d-flex justify-content-between align-items-center flex-wrap gap-3">
-                                        <div class="d-flex align-items-center common-text-color gap-3">
-                                            <p class="semibold-font f-20 m-0">Service request</p>
-                                            <p class="m-0">Last updated : 10:00 AM, 9th April 2025</p>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3">
-                                            <p class="common-request-counter semibold-font text-white m-0 text-center">
-                                                04</p>
-                                            <p class="common-text-color m-0">Received today</p>
-                                        </div>
-                                    </div>
-                                    <div class="inner-content-container pt-5">
-                                        <div class="row g-4 request-type-cards-container">
-                                            <div class="col-sm-6 col-md-4">
-                                                <div class="new-request-card-style common-text-color rounded-3">
-                                                    <div class="img-container float-end d-inline-block">
-                                                        <img src="images/dashboard/add.svg" alt="add">
-                                                    </div>
-                                                    <div class="text-center pt-2">
-                                                        <p class="m-0 f-30 semibold-font">08</p>
-                                                        <p class="f-14 m-0">New request</p>
-                                                    </div>
+                                <div class="inner-content-container pt-5">
+                                    <div class="row g-4 request-type-cards-container">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="new-request-card-style common-text-color rounded-3">
+                                                <div class="img-container float-end d-inline-block">
+                                                    <img src="images/dashboard/add.svg" alt="add">
+                                                </div>
+                                                <div class="text-center pt-2">
+                                                    <p class="m-0 f-30 semibold-font">08</p>
+                                                    <p class="f-14 m-0">New request</p>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 col-md-4">
-                                                <div class="completed-request-card-style common-text-color rounded-3">
-                                                    <div class="img-container float-end d-inline-block">
-                                                        <img src="images/dashboard/check.svg" alt="add">
-                                                    </div>
-                                                    <div class="text-center pt-2">
-                                                        <p class="m-0 f-30 semibold-font">02</p>
-                                                        <p class="f-14 m-0">Completed</p>
-                                                    </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="completed-request-card-style common-text-color rounded-3">
+                                                <div class="img-container float-end d-inline-block">
+                                                    <img src="images/dashboard/check.svg" alt="add">
+                                                </div>
+                                                <div class="text-center pt-2">
+                                                    <p class="m-0 f-30 semibold-font">02</p>
+                                                    <p class="f-14 m-0">Completed</p>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 col-md-4">
-                                                <div class="outstanding-request-card-style common-text-color rounded-3">
-                                                    <div class="img-container float-end d-inline-block">
-                                                        <img src="images/dashboard/info.svg" alt="add">
-                                                    </div>
-                                                    <div class="text-center pt-2">
-                                                        <p class="m-0 f-30 semibold-font">01</p>
-                                                        <p class="f-14 m-0">Outstanding</p>
-                                                    </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="outstanding-request-card-style common-text-color rounded-3">
+                                                <div class="img-container float-end d-inline-block">
+                                                    <img src="images/dashboard/info.svg" alt="add">
+                                                </div>
+                                                <div class="text-center pt-2">
+                                                    <p class="m-0 f-30 semibold-font">01</p>
+                                                    <p class="f-14 m-0">Outstanding</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -128,62 +150,43 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <div class="row gy-4 h-100">
-                            <div class="col-lg-4 ppms-meter-raeding-progress-container">
-                                <div class="meter-readings-container bg-white rounded-4 p-4 h-100">
-                                    <p class="semibold-font common-text-color f-20">Meter readings</p>
-                                    <div class="inner-content-container mt-5 pt-5">
-                                        <div
-                                            class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
-                                            <p class="common-text-color f-18 m-0">Daily <span
-                                                    class="semibold-font">62</span>%</p>
-                                            <p class="common-text-color f-18 m-0">150/280</p>
-                                        </div>
-                                        <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <div class="progress-bar" [style.width.%]="62"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 ppms-meter-raeding-progress-container">
-                                <div class="meter-readings-container bg-white rounded-4 p-4 h-100">
-                                    <p class="semibold-font common-text-color f-20">Rounds</p>
-                                    <div class="row g-5">
-                                        <div class="col-6">
-                                            <div class="inner-content-container custom-border-right pe-5">
-                                                <div class="d-flex align-items-center gap-3 my-4">
-                                                    <img src="images/dashboard/user-shield.svg" alt="shield">
-                                                    <p class="semibold-font f-20 common-text-color m-0">Security</p>
-                                                </div>
-                                                <div class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
-                                                    <p class="common-text-color f-18 m-0">Daily <span
-                                                            class="semibold-font">50</span>%</p>
-                                                    <p class="common-text-color f-18 m-0">1/2</p>
-                                                </div>
-                                                <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                                    aria-valuemax="100">
-                                                    <div class="progress-bar" [style.width.%]="50"></div>
-                                                </div>
+                        <div class="col-md-6 col-lg-12 ppms-meter-raeding-progress-container mt-4">
+                            <div class="meter-readings-container bg-white rounded-4 p-4 h-100">
+                                <p class="semibold-font common-text-color f-20">Rounds</p>
+                                <div class="row g-5">
+                                    <div class="col-6">
+                                        <div class="inner-content-container custom-border-right pe-5">
+                                            <div class="d-flex align-items-center gap-3 my-4">
+                                                <img src="images/dashboard/user-shield.svg" alt="shield">
+                                                <p class="semibold-font f-20 common-text-color m-0">Security</p>
+                                            </div>
+                                            <div
+                                                class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
+                                                <p class="common-text-color f-18 m-0">Daily <span
+                                                        class="semibold-font">50</span>%</p>
+                                                <p class="common-text-color f-18 m-0">1/2</p>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-valuenow="25"
+                                                aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar" [style.width.%]="50"></div>
                                             </div>
                                         </div>
-                                        <div class="col-6">
-                                            <div class="inner-content-container">
-                                                <div class="d-flex align-items-center gap-3 my-4">
-                                                    <img src="images/dashboard/user-plumber.svg" alt="plumber">
-                                                    <p class="semibold-font f-20 common-text-color m-0">MEP</p>
-                                                </div>
-                                                <div class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
-                                                    <p class="common-text-color f-18 m-0">Daily <span
-                                                            class="semibold-font">0</span>%</p>
-                                                    <p class="common-text-color f-18 m-0">0/2</p>
-                                                </div>
-                                                <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                                    aria-valuemax="100">
-                                                    <div class="progress-bar" [style.width.%]="2"></div>
-                                                </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="inner-content-container">
+                                            <div class="d-flex align-items-center gap-3 my-4">
+                                                <img src="images/dashboard/user-plumber.svg" alt="plumber">
+                                                <p class="semibold-font f-20 common-text-color m-0">MEP</p>
+                                            </div>
+                                            <div
+                                                class="progress-bar-data-container d-flex justify-content-between align-items-center mb-4">
+                                                <p class="common-text-color f-18 m-0">Daily <span
+                                                        class="semibold-font">0</span>%</p>
+                                                <p class="common-text-color f-18 m-0">0/2</p>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-valuenow="25"
+                                                aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar" [style.width.%]="2"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -191,14 +194,13 @@
                             </div>
                         </div>
                     </div>
-                   </div>
                 </div>
 
             </div>
         </div>
 
         <div class="second-row-container mt-4 px-2">
-            <div class="row gy-4">
+            <div class="row">
                 <div class="col-xxl-5">
                     <div class="utility-consumption-container bg-white rounded-4 p-4 h-100">
                         <p class="semibold-font common-text-color f-20 m-0">Utility consumption</p>
@@ -208,109 +210,116 @@
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
-                              </select>
+                            </select>
                         </div>
 
-                    <div class="chart-container mt-5">
-                        <div class="row align-items-start">
-                            <div class="col-sm-3">
-                                <div class="energy-water-card-container energy-container d-flex flex-sm-column align-items-start justify-content-between ps-4 pt-4 p-3 rounded-3">
-                                    <img src="/images/dashboard/bolt.svg" alt="bolt" width="24px">
-                                       <div class="content-container text-white">
-                                          <p class="f-16 semibold-font m-0">ENERGY</p>
-                                          <p class="f-20 semibold-font m-0">15480 <span class="f-14">kWh</span></p>
-                                          <p class="f-14 m-0"><i>Yesterday</i></p>
-                                       </div> 
-                                     
+                        <div class="chart-container mt-5">
+                            <div class="row align-items-start">
+                                <div class="col-sm-3">
+                                    <div
+                                        class="energy-water-card-container energy-container d-flex flex-sm-column align-items-start justify-content-between ps-4 pt-4 p-3 rounded-3">
+                                        <img src="/images/dashboard/bolt.svg" alt="bolt" width="24px">
+                                        <div class="content-container text-white">
+                                            <p class="f-16 semibold-font m-0">ENERGY</p>
+                                            <p class="f-20 semibold-font m-0">15480 <span class="f-14">kWh</span></p>
+                                            <p class="f-14 m-0"><i>Yesterday</i></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="chart-data-container">
+                                        <app-chart [chartid]="'energyUtilityBarChart'"
+                                            [configChart]="energyUtilityBarChartData"></app-chart>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-9">
-                                <div class="chart-data-container">
-                                    <app-chart [chartid]="'energyUtilityBarChart'"
-                                    [configChart]="energyUtilityBarChartData"></app-chart>
+                            <div class="row align-items-start mt-3">
+                                <div class="col-sm-3">
+                                    <div
+                                        class="energy-water-card-container water-container d-flex flex-sm-column align-items-start justify-content-between ps-4 pt-4 p-3 rounded-3">
+                                        <img src="/images/dashboard/raindrops.svg" alt="raindrop" width="24px">
+                                        <div class="content-container text-white">
+                                            <p class="f-16 semibold-font m-0">WATER</p>
+                                            <p class="f-20 semibold-font m-0">218.2 <span class="f-14">KL</span></p>
+                                            <p class="f-14 m-0"><i>Yesterday</i></p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row align-items-start mt-3">
-                            <div class="col-sm-3">
-                                <div class="energy-water-card-container water-container d-flex flex-sm-column align-items-start justify-content-between ps-4 pt-4 p-3 rounded-3">
-                                    <img src="/images/dashboard/raindrops.svg" alt="raindrop" width="24px">
-                                       <div class="content-container text-white">
-                                          <p class="f-16 semibold-font m-0">WATER</p>
-                                          <p class="f-20 semibold-font m-0">218.2 <span class="f-14">KL</span></p>
-                                          <p class="f-14 m-0"><i>Yesterday</i></p>
-                                       </div> 
-                                </div>
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="chart-data-container">
-                                    <app-chart [chartid]="'waterUtilityBarChart'"
-                                    [configChart]="waterUtilityBarChartData"></app-chart>
+                                <div class="col-sm-9">
+                                    <div class="chart-data-container">
+                                        <app-chart [chartid]="'waterUtilityBarChart'"
+                                            [configChart]="waterUtilityBarChartData"></app-chart>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
                 </div>
                 <div class="col-xxl-7">
-                    <div class="row gy-4 h-100">
-                        <div class="col-md-6">
+                    <div class="row h-100">
+                        <div class="col-md-6 mt-4 mt-xxl-0">
                             <div class="alerts-container bg-white rounded-4 p-4 h-100">
-                                <div class="header-details d-flex justify-content-between align-items-center flex-wrap gap-3">
-                                            <p class="semibold-font common-text-color f-20 m-0">Alerts</p>
-                                        <div class="d-flex align-items-center gap-3">
-                                            <p class="common-request-counter semibold-font text-white m-0 text-center">
-                                                08</p>
-                                            <p class="common-text-color m-0">Total alerts</p>
-                                        </div>
-                                </div>
-                                  <div class="fixed-height d-flex flex-column gap-3 mt-4">
-                                    @for (el of alertsDtl; track $index) {
-                                <div class="chiller-content-container p-3 me-4">
-                                    <div class="header-details d-flex justify-content-between align-items-center">
-                                        <p class="f-20 semibold-font m-0">{{el.title}}</p>
-                                         <div class="critical-container d-flex align-items-center gap-2 rounded-3 px-3 py-2">
-                                            <img src="images/dashboard/critical.svg" alt="critical">
-                                            <p class="f-12 m-0 medium-font">Critical</p>
-                                         </div>
+                                <div
+                                    class="header-details d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                    <p class="semibold-font common-text-color f-20 m-0">Alerts</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <p class="common-request-counter semibold-font text-white m-0 text-center">
+                                            08</p>
+                                        <p class="common-text-color m-0">Total alerts</p>
                                     </div>
-                                    <div class="inner-text-details mt-2">
-                                        <p class="f-16 common-text-color m-0">{{el.titleDtl}}</p>
-                                     </div>
-                                     <div class="time-details mt-1">
-                                        <p class="f-16 m-0"> <i>{{el.timeDtl}}</i> </p>
-                                     </div>
                                 </div>
-                            }
-                            </div>
+                                <div class="fixed-height d-flex flex-column gap-3 mt-4">
+                                    @for (el of alertsDtl; track $index) {
+                                    <div class="chiller-content-container p-3 me-4">
+                                        <div class="header-details d-flex justify-content-between align-items-center">
+                                            <p class="f-20 semibold-font m-0">{{el.title}}</p>
+                                            <div
+                                                class="critical-container d-flex align-items-center gap-2 rounded-3 px-3 py-2">
+                                                <img src="images/dashboard/critical.svg" alt="critical">
+                                                <p class="f-12 m-0 medium-font">Critical</p>
+                                            </div>
+                                        </div>
+                                        <div class="inner-text-details mt-2">
+                                            <p class="f-16 common-text-color m-0">{{el.titleDtl}}</p>
+                                        </div>
+                                        <div class="time-details mt-1">
+                                            <p class="f-16 m-0"> <i>{{el.timeDtl}}</i> </p>
+                                        </div>
+                                    </div>
+                                    }
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mt-4 mt-xxl-0">
                             <div class="alerts-container bg-white rounded-4 p-4 h-100">
-                                <div class="header-details d-flex justify-content-between align-items-center flex-wrap gap-3">
-                                            <p class="semibold-font common-text-color f-20 m-0">AMC</p>
-                                        <div class="d-flex align-items-center gap-3">
-                                            <p class="common-request-counter semibold-font text-white m-0 text-center">
-                                                16</p>
-                                            <p class="common-text-color m-0">This month</p>
-                                        </div>
+                                <div
+                                    class="header-details d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                    <p class="semibold-font common-text-color f-20 m-0">AMC</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <p class="common-request-counter semibold-font text-white m-0 text-center">
+                                            16</p>
+                                        <p class="common-text-color m-0">This month</p>
+                                    </div>
                                 </div>
-                                  <div class="fixed-height d-flex flex-column gap-3 mt-4">
+                                <div class="fixed-height d-flex flex-column gap-3 mt-4">
                                     @for (el of generatorDtl; track $index) {
-                                <div class="chiller-content-container p-3 me-4">
-                                    <div class="inner-text-details d-flex align-items-start gap-3 mt-2">
-                                        <img src="images/dashboard/generator.svg" alt="generator">
-                                         <div class="d-flex flex-column gap-2">
-                                            <p class="f-20 semibold-font common-text-color m-0"> {{
-                                                el.title.split(' ').slice(0, el.title.split(' ').length - 1).join(' ')
-                                              }}<span class="regular-font ms-2">{{ el.title.split(' ')[el.title.split(' ').length - 1] }}</span></p>
-                                            <p class="m-0 f-16 generator-text-style"> <i>{{ el.timeDtl }}</i> </p>
-                                         </div>
-                                     </div>
+                                    <div class="chiller-content-container p-3 me-4">
+                                        <div class="inner-text-details d-flex align-items-start gap-3 mt-2">
+                                            <img src="images/dashboard/generator.svg" alt="generator">
+                                            <div class="d-flex flex-column gap-2">
+                                                <p class="f-20 semibold-font common-text-color m-0"> {{
+                                                    el.title.split(' ').slice(0, el.title.split(' ').length - 1).join('
+                                                    ')
+                                                    }}<span class="regular-font ms-2">{{ el.title.split('
+                                                        ')[el.title.split(' ').length - 1] }}</span></p>
+                                                <p class="m-0 f-16 generator-text-style"> <i>{{ el.timeDtl }}</i> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    }
                                 </div>
-                            }
-                            </div>
                             </div>
                         </div>
                     </div>

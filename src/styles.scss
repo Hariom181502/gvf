@@ -114,6 +114,43 @@ html{
     font-family: 'Inter-b' !important;
   }
 
+//----------------------------
+//--Scrollbar Styling---------
+//----------------------------
+
+::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-track:vertical {
+  background: #E4EAF2;
+  border-left: 9px solid white;
+  border-right: 9px solid white;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: #B6C8DE;
+  border-left: 8px solid white;
+  border-right: 8px solid white;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background: #E4EAF2;
+  border-top: 9px solid white;
+  border-bottom: 9px solid white;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #B6C8DE;
+  border-top: 8px solid white;
+  border-bottom: 8px solid white;
+  border-radius: 8px;
+}
+
   // ----------------------------------
   // -----------Additional Styling-----------
   // ----------------------------------

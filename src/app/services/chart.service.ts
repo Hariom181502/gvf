@@ -35,7 +35,7 @@ export class ChartService {
       },
       options: {
         cutout: '60%',
-        aspectRatio: 1.3,
+        aspectRatio: 1,
         plugins: {
           legend: {
             position: 'start',
@@ -201,8 +201,6 @@ export class ChartService {
       }
     }
    
-
-    
     const responseData = {
       checksLogsDoughnutChartData: checksLogsDoughnutChartData,
       energyUtilityBarChartData: energyUtilityBarChartData,
