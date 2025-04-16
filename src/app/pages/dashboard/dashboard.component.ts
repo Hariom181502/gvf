@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit{
   
   checksLogsDoughnutChartData:any;
   energyUtilityBarChartData:any;
+  waterUtilityBarChartData:any;
   generatorDtl:any;
   alertsDtl:any;
 
@@ -27,6 +28,7 @@ export class DashboardComponent implements OnInit{
     this.chartService.getChartsData().subscribe((res:any) => {
       this.checksLogsDoughnutChartData = res?.checksLogsDoughnutChartData;
       this.energyUtilityBarChartData = res?.energyUtilityBarChartData;
+      this.waterUtilityBarChartData = res?.waterUtilityBarChartData;
     });
 
     this.alertsDtl = alertsDtl;

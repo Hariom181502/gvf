@@ -6,8 +6,9 @@
 @mixin energy-water-card-style($bg-gradient, $bg-image) {
   position: relative;
   background: $bg-gradient;
-  max-width: 160px;
-  &::after {
+  max-width: 180px;
+  min-height: 220px;
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -81,7 +82,7 @@
     .form-select{
       --bs-form-select-bg-img: url("/images/dashboard/down-arrow.svg");
       background-position: right 2rem center;
-      padding: 1.7rem 1.5rem;
+      padding: 1.2rem 1.5rem;
       border-color: #D8D8D8;
       border-radius: 4px;
       font-size:1.8rem ;
@@ -108,6 +109,7 @@
   .generator-text-style{
     color: #646464;
   }
+ 
   .energy-container {
     @include energy-water-card-style(
       linear-gradient(to right, #92D797 0%, #047243 100%),
@@ -120,6 +122,16 @@
       linear-gradient(to right, #90E6F3 0%, #00485C 100%),
       "/images/dashboard/energy.svg"
     );
+  }
+  
+}
+
+
+@media screen and (max-width: 575px) {
+  .energy-water-card-container{
+    max-width: inherit !important;
+    min-height: 100px !important;
+    text-align: end;
   }
   
 }
