@@ -1,0 +1,26 @@
+<div class="side-menu-canvas-container">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenuOffcanvas">
+
+        <div class="offcanvas-header mt-3">
+            <img src="images/side-menu/logo.svg" alt="logo" class="img-fluid">
+        </div>
+
+        <div class="offcanvas-body">
+               <div class="menu-list-container d-flex flex-column gap-3">
+                @for (item of menuList; track item; let i = $index) {
+                  <div [ngClass]="{'active-menu':activeIndex == i}" class="menu-details d-flex align-items-center cursor-pointer" (click)="setMenuIndex(i)">
+                    <img [src]="item.imgPath" [alt]="item.altText" width="20px">
+                    <p class="f-12 text-white m-0 ms-3 sm-sidebar">{{item.title}}</p>
+                  </div>
+                }
+               </div>
+        </div>
+
+        <div class="logout-container p-3 pe-4 pb-4">
+            <div class="menu-details d-flex align-items-center cursor-pointer">
+                <img src="images/side-menu/logout.svg" alt="logout" width="20px">
+                <p class="f-12 text-white m-0 ms-3 sm-sidebar">Logout</p>
+              </div>
+        </div>
+</div>
+</div>
