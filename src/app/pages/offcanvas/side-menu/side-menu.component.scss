@@ -1,7 +1,6 @@
 ::ng-deep .side-menu-canvas-container{
     .offcanvas{
         width: 180px;
-        transition: width 0.3s ease;
         z-index: 11;
         background-color: #0E263E;
         height: 98%;
@@ -63,6 +62,7 @@
             padding: 1.3rem 0 1.3rem 1.2rem;
             .sm-sidebar{
               display: none;
+
 
 }
         }
